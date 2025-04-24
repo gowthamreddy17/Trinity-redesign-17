@@ -37,7 +37,7 @@ const HeroSection = () => {
             <button className="bg-cta hover:bg-cta/80 text-black px-6 py-3 rounded-md font-medium transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
               Explore Services
             </button>
-            <button className="flex items-center gap-2 text-white hover:text-secondary font-medium px-6 py-3 transition-colors bg-accent">
+            <button className="flex items-center gap-2 text-white hover:text-secondary font-medium px-6 py-3 transition-colors">
               Contact
             </button>
           </div>
