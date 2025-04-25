@@ -17,9 +17,9 @@ const HeroSection = () => {
             We are creative team.
           </p>
 
-          <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold text-primary mb-6 leading-snug max-h-[120px] overflow-hidden">
+          <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold text-green-200 mb-6 leading-snug max-h-[120px] overflow-hidden">
             <Typewriter
-              words={["The best way to promote business"]}
+              words={["The best way to develop business"]}
               loop={true}
               cursor
               cursorStyle="|"
@@ -29,7 +29,7 @@ const HeroSection = () => {
             />
           </h1>
 
-          <p className="text-sm sm:text-base md:text-lg text-dark mb-8 max-w-lg">
+          <p className="text-sm sm:text-base md:text-lg text-dark font-bold mb-8 max-w-lg">
             Our work is presentation of our capabilities. Let your ideas become realworld applications.
           </p>
 
