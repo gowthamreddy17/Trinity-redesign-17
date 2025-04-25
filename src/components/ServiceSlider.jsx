@@ -77,7 +77,7 @@ const ServiceSlider = () => {
     created(s) {
       setInterval(() => {
         s.next();
-      }, 3000);
+      }, 2360);
     },
   });
 
