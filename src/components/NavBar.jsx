@@ -388,7 +388,7 @@ function Navbar() {
 
           ctx.beginPath();
           ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-          ctx.fillStyle = "rgba(255, 255, 255, 0.7)";
+          ctx.fillStyle = "rgba(255, 255, 255, 0.5)";
           ctx.fill();
         });
 
@@ -411,7 +411,7 @@ function Navbar() {
   }, [isMenuOpen]);
 
   return (
-    <nav className="bg-[#0d9488] text-default px-4 py-3 flex items-center justify-between fixed top-0 left-0 w-full z-50 shadow-md overflow-hidden">
+    <nav className="bg-[#0e2a39] text-default px-4 py-3 flex items-center justify-between fixed top-0 left-0 w-full z-50 shadow-md overflow-hidden">
       {/* Particle Background - Navbar */}
       <canvas
         ref={canvasRef}
@@ -423,15 +423,16 @@ function Navbar() {
         <img
           src="https://trinityconsultancy.in/images/about/logo.jpg"
           alt="Logo"
-          className="w-14 h-14 object-contain"
           ref={logoRef}
+          className="w-14 h-14 object-contain rounded-full border border-white brightness-110"
         />
+
         <h2
-          className="font-heading text-xl md:text-2xl font-bold text-white"
+          className="font-heading text-xl md:text-2xl font-bold text-[#8ACCD5]"
           ref={titleRef}
         >
           <span className="block md:hidden">TRINITY</span>
-          <span className="hidden md:block">TRINITY Consultancy</span>
+          <span className="hidden md:block">TRINITY CONSULTANCY</span>
         </h2>
       </Link>
 
@@ -507,7 +508,6 @@ function Navbar() {
 }
 
 export default Navbar;
-
 
 // import { useState, useEffect, useRef } from "react";
 // import { Home, Info, Clipboard, Phone, Menu, X } from "lucide-react";

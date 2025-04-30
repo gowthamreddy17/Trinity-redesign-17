@@ -171,10 +171,11 @@
 // };
 
 // export default HeroSection;
+
 import React, { useRef, useEffect } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import Lottie from "lottie-react";
-import animationData from "../assets/hero-lottie.json";
+import animationData from "../assets/test1.json";
 import ModelViewer from "../components/ModelViewer";
 import SvgDrawer from "../components/SvgDrawer";
 import FloatingIcons from "../components/FloatingIcons";
@@ -227,11 +228,11 @@ const HeroSection = () => {
     // Animation setup
     if (
       !titleRef.current ||
-      !subtitleRef.current ||
+      // !subtitleRef.current ||
       !descriptionRef.current ||
-      !lottieRef.current ||
-      !modelRef.current ||
-      !svgRef.current
+      !lottieRef.current 
+      // !modelRef.current ||
+      // !svgRef.current
     )
       return;
 
@@ -294,66 +295,19 @@ const HeroSection = () => {
     }
 
     // Enhanced button hover effects
-    const buttons = buttonsRef.current.filter(Boolean);
-    const hoverHandlers = buttons.map((button, index) => {
-      const isServicesButton = index === 0;
-
-      const mouseEnter = () => {
-        gsap.to(button, {
-          scale: 1.05,
-          backgroundColor: isServicesButton ? "#fec601" : "#0f172a",
-          color: isServicesButton ? "#0f172a" : "#fec601",
-          borderColor: isServicesButton ? "#0f172a" : "#fec601",
-          duration: 0.3,
-          ease: "power2.out",
-        });
-        gsap.to(button.querySelector("span"), {
-          x: 5,
-          rotate: isServicesButton ? 0 : 45,
-          duration: 0.3,
-          ease: "power2.out",
-        });
-      };
-
-      const mouseLeave = () => {
-        gsap.to(button, {
-          scale: 1,
-          backgroundColor: isServicesButton ? "#0f172a" : "transparent",
-          color: isServicesButton ? "#fec601" : "#0f172a",
-          borderColor: isServicesButton ? "#0f172a" : "#0f172a",
-          duration: 0.3,
-          ease: "power2.out",
-        });
-        gsap.to(button.querySelector("span"), {
-          x: 0,
-          rotate: 0,
-          duration: 0.3,
-          ease: "power2.out",
-        });
-      };
-
-      button.addEventListener("mouseenter", mouseEnter);
-      button.addEventListener("mouseleave", mouseLeave);
-
-      return { button, mouseEnter, mouseLeave };
-    });
 
     return () => {
       if (animationRef.current) {
         animationRef.current.kill();
       }
       window.removeEventListener("resize", handleResize);
-      hoverHandlers.forEach(({ button, mouseEnter, mouseLeave }) => {
-        button.removeEventListener("mouseenter", mouseEnter);
-        button.removeEventListener("mouseleave", mouseLeave);
-      });
     };
   }, []);
 
   return (
     <section
       ref={heroRef}
-      className="relative min-h-screen w-full flex items-center justify-center bg-[#c3fdbf] overflow-hidden px-[10%] pt-20 md:pt-0"
+      className="relative min-h-screen w-full flex items-center justify-center bg-[#F5EEDC] overflow-hidden px-[10%] pt-20 md:pt-0"
     >
       <FloatingIcons
         icons={icons}
@@ -378,7 +332,7 @@ const HeroSection = () => {
           >
             <h1
               ref={titleRef}
-              className="text-2xl md:text-5xl font-bold text-[#228B22] leading-tight"
+              className="text-2xl md:text-5xl font-bold text-[#228B22] leading-tight bg-[#27548A] bg-clip-text text-transparent"
             >
               <Typewriter
                 words={["The best way to develop your business"]}
@@ -411,7 +365,7 @@ const HeroSection = () => {
             <Link
               ref={(el) => (buttonsRef.current[0] = el)}
               to="/services"
-              className="inline-flex w-full sm:w-auto justify-center items-center bg-[#0f172a] text-[#fec601] font-semibold border-2 border-[#0f172a] px-6 py-3 rounded-full text-lg"
+              className="inline-flex w-full sm:w-auto justify-center items-center bg-[#003474] text-[#F5EEDC] font-semibold border-2 border-[#27548A] px-6 py-3 rounded-full text-lg transition-all duration-300 ease-in-out hover:bg-[#F5EEDC] hover:text-[#003474]"
             >
               Explore services
               <span className="ml-2 transition-all duration-300">↗</span>
@@ -420,7 +374,7 @@ const HeroSection = () => {
             <Link
               ref={(el) => (buttonsRef.current[1] = el)}
               to="/contact"
-              className="inline-flex w-full sm:w-auto justify-center items-center bg-transparent text-[#0f172a] font-semibold border-2 border-[#0f172a] px-6 py-3 rounded-full text-lg"
+              className="inline-flex w-full sm:w-auto justify-center items-center bg-transparent text-[#27548A] font-semibold border-2 border-[#27548A] px-6 py-3 rounded-full text-lg transition-all duration-300 ease-in-out hover:bg-[#27548A] hover:text-[#F5EEDC]"
             >
               Contact us
               <span className="ml-2 transition-all duration-300">↗</span>
@@ -432,12 +386,12 @@ const HeroSection = () => {
         <div className="flex-[0.4] flex flex-col items-center justify-start mt-10 md:mt-0">
           <div
             ref={lottieRef}
-            className="w-[250px] md:w-[300px] opacity-80 border-4 border-black rounded-2xl p-2"
+            className="w-[350px] md:w-[500px] h-[1/2] opacity-99 border-4  rounded-2xl p-2 border-none"
           >
             <Lottie animationData={animationData} loop={true} />
           </div>
 
-          <div className="flex w-full justify-between mt-6">
+          {/* <div className="flex w-full justify-between mt-6">
             <div
               ref={modelRef}
               className="w-[200px] md:w-[250px] opacity-98 border-4 border-black rounded-2xl p-2"
@@ -462,7 +416,7 @@ const HeroSection = () => {
                 loopRequired={true}
               />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

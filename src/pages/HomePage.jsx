@@ -1,3 +1,4 @@
+import ServiceScroller from "../components/ServiceScroller";
 import Footer from "../components/Footer";
 import MainSection from "../components/MainSection";
 import Navbar from "../components/NavBar"; // Import Navbar component
@@ -5,8 +6,9 @@ import SvgDrawer from "../components/SvgDrawer";
 
 function HomePage() {
   return (
-    <div className="bg-background text-dark min-h-screen">
+    <div className="bg-white text-dark min-h-screen">
       <Navbar />
+
       {/* <div className="p-8">
           <h1 className="text-primary text-4xl font-heading">Welcome to the Home Page!</h1>
           <p className="text-secondary mt-4">This is where your homepage content goes.</p>

@@ -33,7 +33,7 @@ export default function ContactCard() {
 
       {/* Text Content */}
       <div className="relative z-10 w-full md:w-1/2 flex flex-col gap-5 text-center md:text-left mt-10">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-primary leading-tight">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-[#276c19] leading-tight">
           We Create for You
         </h2>
         <h3 className="text-xl md:text-2xl font-semibold text-gray-800">
