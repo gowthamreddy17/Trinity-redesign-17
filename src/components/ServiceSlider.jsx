@@ -564,14 +564,14 @@ const ServiceSlider = () => {
   });
 
   return (
-    <div className="px-4 py-16 bg-[#FFFFFF00]">
-      <h2 className="text-3xl font-semibold text-center text-[#fec601] underline decoration-white mb-8">
-       🖥️ Our Core Services
+    <div className="px-4 py-16 bg-[#F5EEDC] rounded-lg max-w-[1]">
+      <h2 className="text-3xl font-semibold text-center text-[#27548A] underline decoration-[#27548A] mb-8">
+        Our Core Services
       </h2>
       <div ref={sliderRef} className="keen-slider px-2">
         {services.map((service, index) => (
           <div key={index} className="keen-slider__slide flex justify-center">
-            <div className="w-[300px] flex flex-col rounded-xl overflow-hidden bg-white shadow-md hover:shadow-xl transition duration-300">
+            <div className="w-[300px] flex flex-col rounded-xl overflow-hidden bg-gray-800 shadow-md hover:shadow-xl transition duration-300">
               <img
                 src={service.image}
                 alt={service.title}
@@ -580,11 +580,11 @@ const ServiceSlider = () => {
               <div className="p-5 flex flex-col flex-1">
                 <div className="mb-3 flex items-center gap-3">
                   {service.icon}
-                  <h3 className="text-xl font-bold text-black underline decoration-[#fec601]">
+                  <h3 className="text-xl font-bold text-[#fec601] underline decoration-[#fec601]">
                     {service.title}
                   </h3>
                 </div>
-                <p className="text-black text-sm flex-1">
+                <p className="text-white text-sm flex-1">
                   {service.description}
                 </p>
               </div>

@@ -428,11 +428,11 @@ function Navbar() {
         />
 
         <h2
-          className="font-heading text-xl md:text-2xl font-bold text-[#8ACCD5]"
+          className="font-heading text-xl md:text-2xl font-bold text-[#ffc464]"
           ref={titleRef}
         >
           <span className="block md:hidden">TRINITY</span>
-          <span className="hidden md:block">TRINITY CONSULTANCY</span>
+          <span className="hidden md:block">𝐓𝐑𝐈𝐍𝐈𝐓𝐘 𝐂𝐎𝐍𝐒𝐔𝐋𝐓𝐀𝐍𝐂𝐘</span>
         </h2>
       </Link>
 
@@ -473,7 +473,7 @@ function Navbar() {
 
       {/* Mobile Overlay */}
       <div
-        className={`fixed top-0 left-0 w-full h-full bg-[#0d9488] z-40 transition-transform duration-500 ease-in-out ${
+        className={`fixed top-0 left-0 w-full h-full bg-[#0e2a39] z-40 transition-transform duration-500 ease-in-out ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         } overflow-hidden`}
       >

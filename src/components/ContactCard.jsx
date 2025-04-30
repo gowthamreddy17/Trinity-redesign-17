@@ -16,8 +16,10 @@ export default function ContactCard() {
       initial={{ opacity: 0, y: 100 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="relative flex flex-col md:flex-row items-center justify-between gap-10 px-6 py-12 md:p-16 bg-gradient-to-br from-[#f0f4ff] to-[#e6f7ff] rounded-3xl overflow-hidden shadow-xl mt-10 mb-10"
+      className="relative flex flex-col md:flex-row items-center justify-between gap-10 px-6 py-12 md:p-16 bg-[#F5EEDC] rounded-3xl overflow-hidden shadow-xl mt-10 mb-10"
     >
+
+{/* bg-gradient-to-br from-[#f0f4ff] to-[#e6f7ff] rounded-3xl overflow-hidden shadow-xl mt-10 mb-10 */}
       {/* Background Blurs */}
       <div className="absolute -top-10 -left-10 w-60 h-60 bg-[#cdb4db] opacity-20 rounded-full blur-3xl z-0" />
       <div className="absolute -bottom-16 right-0 w-80 h-80 bg-[#a2d2ff] opacity-20 rounded-full blur-3xl z-0" />
@@ -42,7 +44,7 @@ export default function ContactCard() {
         <p className="text-gray-600 text-base md:text-lg">
           Have any project in mind? For immediate support:
         </p>
-        <div className="text-accent font-medium text-lg">
+        <div className="text-[#27548A] font-medium text-lg">
           📞 +91-9959887550<br />
           📧 trinityconsultancy.2025@gmail.com
         </div>

@@ -44,7 +44,7 @@ const AnimatedStats = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 1, ease: "easeOut" }}
-      className="bg-background text-white py-16 px-6 md:px-12 rounded-xl max-w-[1] mx-auto"
+      className="bg-[#F5EEDC] text-white py-16 px-6 md:px-12 rounded-xl max-w-[1] mx-auto"
     >
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
         {stats.map((stat, i) => {
